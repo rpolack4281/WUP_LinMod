@@ -118,8 +118,18 @@ Above is the linear model of the relationship between SIMS and GRIP, and it also
 
 #### predict model.2 at target point
 
+```{r}
+predict(model.2, Targetpoint, interval = "prediction")
+
+```
+
 #### now add the model fit to our plot for model.2
-  
+
+```{r}
+basicGRIP + geom_point()+geom_lm()
+```
+
+The scatter plot above combined the original data and the predicted values for SIMS~GRIP. Given all the information previously determined, this model specifically grip strength, is not as reliable in arm strength in predicting a worker's performance in simulations. 
 
 
 ## Model 3 SIM~ARM+GRIP
