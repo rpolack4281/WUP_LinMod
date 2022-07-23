@@ -136,7 +136,12 @@ The scatter plot above combined the original data and the predicted values for S
 
 ### Numerical results (cor)
 
-`
+```{r}
+cor(SIMS~ARM+GRIP,data=data)
+```
+
+The value of the correlation coefficient of the third model is higher than those of the previous two. This indicates that this model may be better than the first two models, but further tests can be done to confirm this. 
+
   
 ### Inferential  (Build 2-dimentional model.3)
 
