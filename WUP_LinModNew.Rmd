@@ -108,7 +108,13 @@ cor(SIMS~GRIP,data=data)
 The value above provides the specific correlation coefficient on the relationship between SIMS and GRIP although a value of 0.640 is quite decent in showing the positive linear relationship between SIMS and GRIP it is lower then that of the first model. Therefore, it points towards the idea that arm strength is a better variable in predicting a worker's performance in the simulation.
 
 ### Inferential  (Build model.2)
-  
+
+```{r}
+model.2 <- lm(SIMS~GRIP,data=data)
+summary.lm(model.2)
+```  
+Above is the linear model of the relationship between SIMS and GRIP, and it also shows the standard residual error value and the adjusted r-squared. Comparing these two values from those of the first model, we can expect that the standard deviation curve is wider on this model compared to the first one. Also the adjusted r-squared value on this model means that we're able to reduce the error from the mean model by 40.53% which is lower than that of the first model. Lastly, more of the error is explained by the first model compared to the second model, based on the residual standard error value.  
+
 
 #### predict model.2 at target point
 
