@@ -155,10 +155,23 @@ The model above shows the relationship of SIMS, ARM, and GRIP combined. Based on
 
 #### predict model.3 at target point
   
+```{r}
+predict(model.3, Targetpoint, interval = "prediction")
+
+```
+
 
 ## Comparing nested models ANOVA Test
 
 ### Model.1 vs Model.3
+
+```{r}
+anova(model.1, model.3)
+```
+
+The anova test above shows that model 1 has a residual standard error of 217.88 while model 3 has 188.43. This indicates that model 3 reduced the residual standard error of model 1 by 29.45, and according to the p-value, this difference is statistically significant. Therefore we can confirm that model 3 is better than model 1.
+
+
 ### Model.2 vs Model.3
 
 ## Informally compare Model.1 with model.2
