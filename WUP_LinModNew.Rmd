@@ -87,6 +87,16 @@ The scatter plot above now indicates the prediction line that was determined pre
 
 ## Model 2 SIM~GRIP
 
+```{r}
+basicGRIP <- ggplot(data,aes(y=SIMS,x=GRIP))
+```
+```{r}
+basicGRIP + geom_point()
+```
+
+Similar to the first model, there seems to be a positive liner between SIMS and GRIP. It means the greater the grip strength of a worker, the more likely they are to do well on the simulations.  
+
+
 ### Now add in scatterplot
 
 
