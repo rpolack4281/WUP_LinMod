@@ -174,5 +174,12 @@ The anova test above shows that model 1 has a residual standard error of 217.88 
 
 ### Model.2 vs Model.3
 
+```{r}
+anova(model.2, model.3)
+```
+
+The anova test above shows that model 2 has a residual standard error of 2243.07 while model 3 has 188.43. This indicates that model 3 reduced the residual standard error of model 2 by 54.639, and according to the p-value, this difference is statistically significant. Therefore we can confirm that model 3 is better than model 2.
+
+
 ## Informally compare Model.1 with model.2
 
