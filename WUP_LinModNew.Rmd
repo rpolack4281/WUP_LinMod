@@ -37,8 +37,12 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 
 ### scatterplot
 ```{r}
-plot(SIMS~ARM,data=data)
+basicNN <- ggplot(data,aes(y=SIMS,x=ARM))
 ```
+```{r}
+basicNN + geom_point()
+```
+
 
 It looks like there is an obvious linear relationship between SIMS and ARM. This means that the greater the arm strength of the worker, the better they preform on the simulations that were used to assess job performance. 
 
@@ -74,6 +78,12 @@ This predicted the value we would get from model 1 if the target point for ARM i
 
 #### scatterplot with model fit
   
+```{r}
+basicNN + geom_point()+geom_lm()
+```
+  
+The scatter plot above now indicates the prediction line that was determined previously. It further establishes that the relationship creates a normal distribution wherein the 95% of all the point is within two residual values from the line of best fit. 
+
 
 ## Model 2 SIM~GRIP
 
