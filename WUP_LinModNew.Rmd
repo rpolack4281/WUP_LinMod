@@ -1,7 +1,7 @@
 ---
 title: "linear model from Web"
-author: "Your Name"
-date: "Put semester and year"
+author: "Rachel Polack"
+date: "Summer 2022"
 output:
    html_document:
          toc: true
@@ -33,12 +33,30 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 
 ## Model 1 SIM~ARMS
 
+
+
 ### scatterplot
+```{r}
+plot(SIMS~ARM,data=data)
+```
+
+It looks like there is an obvious linear relationship between SIMS and ARM. This means that the greater the arm strength of the worker, the better they preform on the simulations that were used to assess job performance. 
+
 
 ### Numerical results
+```{r}
+cor(SIMS~ARM,data=data)
+```
 
+The value above provides the specific correlation coefficient on the relationship between SIMS and ARM. The value 0.686 is quite decent in showing the positive linear relationship between SIMS and ARM. 
 
 ### Inferential  (Build model.1)
+```{r}
+model.1 <- lm(SIMS~ARM,data=data)
+summary.lm(model.1)
+```
+
+The model above shows the linear model of the relationship between SIMS and ARM. The most important information that can be taken from the model are the residual standard error and the adjusted r-squared value. A low residual standard error value of 1.226 means that the values do not deviate largely from the predicted value. Moreover, based on the value of the adjusted r-squared, we're reducing the error from the mean model by 46.6%.
 
 #### Predict at target point
 
