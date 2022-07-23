@@ -145,6 +145,14 @@ The value of the correlation coefficient of the third model is higher than those
   
 ### Inferential  (Build 2-dimentional model.3)
 
+```{r}
+model.3 <- lm(SIMS~ARM+GRIP,data=data)
+summary.lm(model.3)
+```
+
+The model above shows the relationship of SIMS, ARM, and GRIP combined. Based on the residual standard error and adjusted r-squared values, this model appears to be better than the first two models. The residual standard error is smaller on this model than the two previous which means that the standard deviation curve would be narrower. Also, the adjusted r-squared value is higher compared to that of the first two models which means which means this model was able to reduce 53.58% of error from the mean model. This is significantly better than that of model 1 and model 2. 
+
+
 #### predict model.3 at target point
   
 
