@@ -60,6 +60,17 @@ The model above shows the linear model of the relationship between SIMS and ARM.
 
 #### Predict at target point
 
+```{r}
+Targetpoint<- data.frame(ARM=88, GRIP=94)
+```
+
+```{r}
+predict(model.1, Targetpoint, interval = "prediction")
+
+```
+
+This predicted the value we would get from model 1 if the target point for ARM is 88 and GRIP is 94. But given that this model only makes use of ARM, it disreguards the target point value for GRIP.
+
 
 #### scatterplot with model fit
   
