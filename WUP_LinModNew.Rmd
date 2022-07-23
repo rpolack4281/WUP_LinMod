@@ -183,3 +183,14 @@ The anova test above shows that model 2 has a residual standard error of 2243.07
 
 ## Informally compare Model.1 with model.2
 
+```{r}
+anova(model.1, model.2)
+```
+
+The anova test above base the order of models depending on which models got inputted first on the code. As a result, number 1 is actually model 2, while number 2 is model 1. This is done so that the difference so the RSS would be a positive number. Meanwhile, we can infer from the anova test above that whichever model has a lower RSS value would be the better model. In this case, number 2 which is actually model 1 is better than model 2. 
+
+```{r}
+anova(model.1, model.2, model.3, test="Cp")
+```
+
+
