@@ -77,7 +77,9 @@ This predicted the value we would get from model 1 if the target point for ARM i
 
 
 #### scatterplot with model fit
-  
+
+### Now add in scatterplot
+
 ```{r}
 basicNN + geom_point()+geom_lm()
 ```
@@ -97,16 +99,13 @@ basicGRIP + geom_point()
 Similar to the first model, there seems to be a positive liner between SIMS and GRIP. It means the greater the grip strength of a worker, the more likely they are to do well on the simulations.  
 
 
-### Now add in scatterplot
+
+### Numerical results 
 
 ```{r}
 cor(SIMS~GRIP,data=data)
 ```
 The value above provides the specific correlation coefficient on the relationship between SIMS and GRIP although a value of 0.640 is quite decent in showing the positive linear relationship between SIMS and GRIP it is lower then that of the first model. Therefore, it points towards the idea that arm strength is a better variable in predicting a worker's performance in the simulation.
-
-
-### Numerical results 
-
 
 ### Inferential  (Build model.2)
   
